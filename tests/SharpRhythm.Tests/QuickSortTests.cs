@@ -1,39 +1,22 @@
-using Xunit;
-using FluentAssertions;
+using Microsoft.FSharp.Collections;
+using FsCheck;
+using FsCheck.Xunit;
 using SharpRhythm.Algorithms.Sort;
 
 namespace SharpRhythm.Tests
 {
-    public class QuickSortTests
+    public class QuickSortTests : SortTest
     {
-        [Fact]
-        public void Should_sort_positive_numbers()
+        [Property(Arbitrary = new[] { typeof(ArbitraryIntegers) })]
+        public void Should_sort_numbers(FSharpList<int> list)
         {
-            var sorted = QuickSort.Sort(Integers.Unsorted);
-
-            sorted.Should().NotBeEmpty()
-                .And.HaveCount(Integers.Unsorted.Length)
-                .And.Contain(Integers.Sorted);
+            Execute(list, QuickSort.Sort);
         }
 
-        [Fact]
-        public void Should_sort_negative_numbers()
+        [Property(Arbitrary = new[] { typeof(ArbitraryStrings) })]
+        public void Should_sort_strings(FSharpList<string> list)
         {
-            var sorted = QuickSort.Sort(Integers.NegativeUnsorted);
-
-            sorted.Should().NotBeEmpty()
-                .And.HaveCount(Integers.NegativeUnsorted.Length)
-                .And.Contain(Integers.NegativeSorted);
-        }
-
-        [Fact]
-        public void Should_sort_strings()
-        {
-            var sorted = QuickSort.Sort(Strings.Unsorted);
-
-            sorted.Should().NotBeEmpty()
-                .And.HaveCount(Strings.Unsorted.Length)
-                .And.Contain(Strings.Sorted);
+            Execute(list, QuickSort.Sort);
         }
     }
 }
