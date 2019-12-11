@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using Xunit;
+using FluentAssertions;
 using SharpRhythm.Algorithms.Sort;
 
 namespace SharpRhythm.Tests
@@ -11,7 +11,9 @@ namespace SharpRhythm.Tests
         {
             var sorted = BubbleSort.Sort(Integers.Unsorted);
 
-            Assert.Equal(Integers.Sorted, sorted);
+            sorted.Should().NotBeEmpty()
+                .And.HaveCount(Integers.Unsorted.Length)
+                .And.Contain(Integers.Sorted);
         }
 
         [Fact]
@@ -19,7 +21,9 @@ namespace SharpRhythm.Tests
         {
             var sorted = BubbleSort.Sort(Integers.NegativeUnsorted);
 
-            Assert.Equal(Integers.NegativeSorted, sorted);
+            sorted.Should().NotBeEmpty()
+                .And.HaveCount(Integers.NegativeUnsorted.Length)
+                .And.Contain(Integers.NegativeSorted);
         }
 
         [Fact]
@@ -27,7 +31,9 @@ namespace SharpRhythm.Tests
         {
             var sorted = BubbleSort.Sort(Strings.Unsorted);
 
-            Assert.Equal(Strings.Sorted, sorted);
+            sorted.Should().NotBeEmpty()
+                .And.HaveCount(Strings.Unsorted.Length)
+                .And.Contain(Strings.Sorted);
         }
     }
 }
