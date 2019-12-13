@@ -8,7 +8,7 @@ using FsCheck;
 using FsCheck.Xunit;
 using SharpRhythm.Algorithms.Sort;
 
-namespace SharpRhythm.Tests
+namespace SharpRhythm.Tests.Unit
 {
     public abstract class SortTest
     {
