@@ -3,6 +3,7 @@
 Stub project for algorithms and data structures implementation C#. Inspired by [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms).
 
 # Build
+
 **NOTE**: .NET Core 3.0 or higher is required.
 ```sh
 # clone the repository
@@ -14,6 +15,7 @@ $ dotnet build -c Release.
 ```
 
 ## Test
+
 ```sh
 # change to tests directory
 $ cd sharprhythm/tests/SharpRhythm.Tests
@@ -28,6 +30,7 @@ $ dotnet test
 ```
 
 ### Implemented
+
 * Algorithms
   * Sorting
     * [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
