@@ -2,10 +2,11 @@ using Microsoft.FSharp.Collections;
 using FsCheck;
 using FsCheck.Xunit;
 using SharpRhythm.Algorithms.Sort;
+using SharpRhythm.Tests.Fakes;
 
-namespace SharpRhythm.Tests
+namespace SharpRhythm.Tests.Unit
 {
-    public class BubbleSortTests : SortTest
+    public class QuickSortTests : SortTest
     {
         [Property(Arbitrary = new[] { typeof(ArbitraryIntegers) })]
         public void Should_sort_numbers(FSharpList<int> list)

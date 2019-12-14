@@ -2,7 +2,7 @@ using Xunit;
 using FluentAssertions;
 using SharpRhythm.Structures;
 
-namespace SharpRhythm.Tests
+namespace SharpRhythm.Tests.Unit
 {
     public class TrieTests
     {

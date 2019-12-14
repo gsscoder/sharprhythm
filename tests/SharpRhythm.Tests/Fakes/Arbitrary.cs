@@ -2,7 +2,7 @@ using Microsoft.FSharp.Core;
 using Microsoft.FSharp.Collections;
 using FsCheck;
 
-namespace SharpRhythm.Tests
+namespace SharpRhythm.Tests.Fakes
 {
     static class ArbitraryIntegers
     {

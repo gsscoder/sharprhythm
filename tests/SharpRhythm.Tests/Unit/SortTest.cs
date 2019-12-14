@@ -2,13 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.FSharp.Collections;
-using Xunit;
 using FluentAssertions;
 using FsCheck;
-using FsCheck.Xunit;
-using SharpRhythm.Algorithms.Sort;
 
-namespace SharpRhythm.Tests
+namespace SharpRhythm.Tests.Unit
 {
     public abstract class SortTest
     {
