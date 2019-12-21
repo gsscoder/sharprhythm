@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SharpRhythm.Algorithms.Sort
+namespace SharpRhythm.Algorithms
 {
     public static class BubbleSort
     {

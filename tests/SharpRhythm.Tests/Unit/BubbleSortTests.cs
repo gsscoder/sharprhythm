@@ -1,7 +1,7 @@
 using Microsoft.FSharp.Collections;
 using FsCheck;
 using FsCheck.Xunit;
-using SharpRhythm.Algorithms.Sort;
+using SharpRhythm.Algorithms;
 using SharpRhythm.Tests.Fakes;
 
 namespace SharpRhythm.Tests.Unit
