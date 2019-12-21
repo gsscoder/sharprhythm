@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace SharpRhythm.Algorithms
 {
     /// <summary>
-    /// Represents a sorting algorithms.
+    /// Represents a sorting algorithm.
     /// </summary>
     public interface ISort
     {
