@@ -8,16 +8,18 @@ namespace SharpRhythm.Tests.Unit
 {
     public class BubbleSortTests : SortTest
     {
+        private static readonly ISort _sut = new BubbleSort();
+
         [Property(Arbitrary = new[] { typeof(ArbitraryIntegers) })]
         public void Should_sort_numbers(FSharpList<int> list)
         {
-            Execute(list, QuickSort.Sort);
+            Execute(list, _sut);
         }
 
         [Property(Arbitrary = new[] { typeof(ArbitraryStrings) })]
         public void Should_sort_strings(FSharpList<string> list)
         {
-            Execute(list, QuickSort.Sort);
+            Execute(list, _sut);
         }
     }
 }

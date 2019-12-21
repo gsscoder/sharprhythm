@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace SharpRhythm.Algorithms
 {
-    public static class BubbleSort
+    public class BubbleSort : ISort
     {
-        public static IEnumerable<T> Sort<T>(IEnumerable<T> collection)
+        public IEnumerable<T> Sort<T>(IEnumerable<T> collection)
             where T : IComparable, 
                       IComparable<T>
         {

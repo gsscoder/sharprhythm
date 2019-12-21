@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace SharpRhythm.Algorithms
 {
-    public static class QuickSort
+    public class QuickSort : ISort
     {
-        public static IEnumerable<T> Sort<T>(IEnumerable<T> collection)
+        public IEnumerable<T> Sort<T>(IEnumerable<T> collection)
             where T : IComparable, 
                       IComparable<T>
         {
@@ -39,8 +39,8 @@ namespace SharpRhythm.Algorithms
                 }
             }
             
-            var leftListSorted = QuickSort.Sort(leftList);
-            var rightListSorted = QuickSort.Sort(rightList);
+            var leftListSorted = Sort(leftList);
+            var rightListSorted = Sort(rightList);
 
             return leftListSorted.Concat(centerList).Concat(rightListSorted);
         }

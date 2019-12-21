@@ -4,20 +4,20 @@ using System.Linq;
 using Microsoft.FSharp.Collections;
 using FluentAssertions;
 using FsCheck;
+using SharpRhythm.Algorithms;
 
 namespace SharpRhythm.Tests.Unit
 {
     public abstract class SortTest
     {
-        protected void Execute<T>(FSharpList<T> list,
-                                  Func<IEnumerable<T>, IEnumerable<T>> test)
+        protected void Execute<T>(FSharpList<T> list, ISort sut)
             where T : IComparable, 
                       IComparable<T>
         {
             var expected = (from n in list
                             select n).ToArray().Sort();
 
-            var sorted = test(list);
+            var sorted = sut.Sort(list);
 
             sorted.Should().NotBeEmpty()
                 .And.HaveCount(list.Count())
