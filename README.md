@@ -35,5 +35,7 @@ $ dotnet test
   * Sorting
     * [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
     * [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
+  * Strings
+    * [Levenshtein Fuzzy Match](https://en.wikipedia.org/wiki/Levenshtein_distance)
 * Data Structures
   * [Trie](https://en.wikipedia.org/wiki/Trie)
