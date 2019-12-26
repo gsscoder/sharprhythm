@@ -1,6 +1,6 @@
 //Use project level define(s) when referencing with Paket.
-//#define CSX_STRING_EXT_INTERNAL // Uncomment this to set StringExtensions accessibility to internal.
-//#define CSX_ARRAY_EXT_INTERNAL // Uncomment this to set ArrayExtensions accessibility to internal.
+#define CSX_STRING_EXT_INTERNAL // Uncomment this to set StringExtensions accessibility to internal.
+#define CSX_ARRAY_EXT_INTERNAL // Uncomment this to set ArrayExtensions accessibility to internal.
 
 using System;
 
