@@ -1,9 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.FSharp.Collections;
 using FluentAssertions;
 using FsCheck;
+using CSharpx;
 using SharpRhythm.Algorithms;
 
 namespace SharpRhythm.Tests.Unit

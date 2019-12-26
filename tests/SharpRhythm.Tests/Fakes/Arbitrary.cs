@@ -1,6 +1,7 @@
 using Microsoft.FSharp.Core;
 using Microsoft.FSharp.Collections;
 using FsCheck;
+using CSharpx;
 
 namespace SharpRhythm.Tests.Fakes
 {
