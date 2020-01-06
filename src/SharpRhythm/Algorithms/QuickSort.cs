@@ -10,6 +10,8 @@ namespace SharpRhythm.Algorithms
             where T : IComparable, 
                       IComparable<T>
         {
+            if (collection == null) throw new ArgumentNullException(nameof(collection));
+
             var list = new List<T>(collection);
 
             if (list.Count() <= 1) {

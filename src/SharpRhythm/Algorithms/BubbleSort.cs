@@ -10,6 +10,8 @@ namespace SharpRhythm.Algorithms
             where T : IComparable, 
                       IComparable<T>
         {
+            if (collection == null) throw new ArgumentNullException(nameof(collection));
+
             bool swapped;
             var array = collection.ToArray();
 
